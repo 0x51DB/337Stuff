@@ -1,0 +1,6 @@
+fr = open("scraped.lines", "r")
+read_data = fr.read()
+fr.close()
+fw = open("scraped.lines", "w")
+fw.write(read_data.lower())
+fw.close()
