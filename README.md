@@ -7,6 +7,8 @@ scraper.py : JSON library operations were running slowly on my dual core, so I d
 
 normalize.py : sets scraped.lines to be all lower case
 
+unduplicate.py : removes duplicates in scraped.lines, so that each tweet will appear only once (doesn't work if the retweeter added something, like a new tag or the OP's name)
+
 winninglines.py : search for tweets that mention winning or "best". Place them in win.lines
 
 bigrams.py : preliminary attempt at finding recurring themes across tweets, based on win.lines
