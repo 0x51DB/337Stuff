@@ -14,6 +14,7 @@ while (i < len(read_data)) :
                 checkboundval = 0
         fw.write(read_data[i:boundval])
         fw.write("\n")
-        i = boundval + 1
+        i = boundval
+    i = i + 1
 fr.close()
 fw.close()
