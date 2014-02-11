@@ -13,6 +13,8 @@ winninglines.py : search for tweets that mention winning or "best". Place them i
 
 bigrams.py : preliminary attempt at finding recurring themes across tweets, based on win.lines. It mainly shows that bigrams alone will not be sufficient for extracting all of the data desired from the tweets.
 
-categories.py : this may turn out to be quite useless. The idea was to use this as the basis for a script that classifies tweets according to the award they refer to using bigrams. The main problems are that not all tweets are explicit about their categories (example tweet: 'adele skyfall wins') and the awards themselves can not be broken up based on bigrams alone - there are multiple best actors and actresses, for example. Using larger ngrams, however, would also be unreasonable, since a tweet is unlikely to spell out 'best actor in a comedy or musical,' for example.
+categories.py : a script for trying to separate tweets from win.lines into categories based on categories.lines
 
-A typical order of executing the files is scraper.py -> normalize.py -> unduplicate.py -> winninglines.py and then either bigrams.py or categories.py.
+categories.lines : a list of categories. Each line contains a single bigram representing a desired category, such as "foreign language" or "best actor."
+
+A typical order of executing the files is scraper.py -> normalize.py -> unduplicate.py -> winninglines.py and then either bigrams.py or categories.py. After categories.py is executed, each file in ./categories/ represents a collection of relevant tweets. This makes a few of the categories very easy (such as lifetime achivement) but does not help with others (since the different types of best actor can not be differentiated using bigrams alone, for example).
