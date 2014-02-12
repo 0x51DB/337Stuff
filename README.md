@@ -1,7 +1,7 @@
 337Stuff
 ========
 
-Playing around with NLP ... for my EECS 337 class
+Playing around with NLP ... for my EECS 337 class. This relies on a file provided by the instructor called 'goldenglobes.json' that I have not included here. The file contains JSON data involving a number of tweets about the 2013 golden globes. The goal of an assignment for the class was to use this data to determine who won each award in the 2013 golden globes. Here I include some scripts and other resources that I used to manipulate, search, categorize this data, etc.
 
 scraper.py : JSON library operations were running slowly on my dual core, so I decided to blame the unnecessary JSON data like date and username, as well as structural things. scraper.py removes this from goldenglobes.json to create scraped.lines, consisting of text only on every line, with no extra data.
 
