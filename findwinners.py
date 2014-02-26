@@ -17,4 +17,5 @@ for block in nominee_blocks :
                 count[i] = count[i] + 1
     ret_line = nominee_lines[count.index(max(count))]
     ret_line = ret_line + ' has won an award for ' + nominee_lines[1] + '!'
+    print count
     print ret_line

@@ -21,4 +21,10 @@ nominee.lines : a list of nominees, awards, and the associated category. This is
 
 findwinners.py : a script that uses nominee.lines and the associated files in categories/ to determine the winner of each award based on a frequency count.
 
+timescrape.py : a script that uses goldenglobes.json to post the time of each tweet in time.lines. This can then be used in coordination with the raw scraped.lines data to obtain time data for a given n-gram.
+
+ngramtimedata.py : a script that picks out the times at which a given ngram appears, placing them in timedata.lines.
+
+plottimedata.py : a script that uses the data from timedata.lines to plot the ngram's occurence over time.
+
 A typical order of executing the files is scraper.py -> normalize.py -> unduplicate.py -> winninglines.py -> categories.py -> findwinners.py.
